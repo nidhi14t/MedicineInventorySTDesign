@@ -59,7 +59,7 @@ public class Order implements OrderStateAPI {
     }
     public void addMedicine(MedicineAPI medicine) {
         medicineList.add(medicine);
-        orderCost+=medicine.medicinePrice();
+        orderCost+=medicine.medPrice();
         count++;
         observers.forEach(o->o.updated(this));
     }
