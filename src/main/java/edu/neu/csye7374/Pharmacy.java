@@ -5,7 +5,7 @@ import edu.neu.csye7374.Strategy.*;
 
 import java.util.*;
 
-public class Pharmacy implements PharmacyAPI, PharmacyStateAPI {
+public class Pharmacy implements MedicineInventoryAPI, PharmacyStateAPI {
     String name;
     public List<Medicine> itemList = new ArrayList<>();
     public List<Person> personList = new ArrayList<>();

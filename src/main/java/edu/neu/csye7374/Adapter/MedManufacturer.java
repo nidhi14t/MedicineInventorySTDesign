@@ -2,13 +2,19 @@ package edu.neu.csye7374.Adapter;
 
 import java.io.Serializable;
 
-public class MedManufacturer implements Serializable, Cloneable {
+public class MedManufacturer implements Cloneable {
 
 	private static MedManufacturer instance;
 
 	private String medmanufacturerName;
 	private int totalyearsOfManufacturing;
 	private int allproductsManufactured;
+
+    public static void setInstance(MedManufacturer instance) {
+        MedManufacturer.instance = instance;
+    }
+     
+
 
 	public MedManufacturer() {
 		super();
@@ -32,24 +38,30 @@ public class MedManufacturer implements Serializable, Cloneable {
 		return medmanufacturerName;
 	}
 
-	public void setMedmanufacturerName(String medmanufacturerName) {
+	public MedManufacturer setMedmanufacturerName(String medmanufacturerName) {
 		this.medmanufacturerName = medmanufacturerName;
-	}
+	 return this;
+        }
 
 	public int getTotalyearsOfManufacturing() {
 		return totalyearsOfManufacturing;
 	}
+        public MedManufacturer setTotalyearsOfManufacturing(int yearsOfManufacturing) {
+        this.totalyearsOfManufacturing = yearsOfManufacturing;
+        return this;
+    }
 
-	public void setTotalyearsOfManufacturing(int totalyearsOfManufacturing) {
-		this.totalyearsOfManufacturing = totalyearsOfManufacturing;
-	}
+//	public void setTotalyearsOfManufacturing(int totalyearsOfManufacturing) {
+//		this.totalyearsOfManufacturing = totalyearsOfManufacturing;
+//	}
 
 	public int getAllproductsManufactured() {
 		return allproductsManufactured;
 	}
 
-	public void setAllproductsManufactured(int allproductsManufactured) {
+	public MedManufacturer setAllproductsManufactured(int allproductsManufactured) {
 		this.allproductsManufactured = allproductsManufactured;
+                return this;
 	}
 
 	@Override
