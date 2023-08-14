@@ -13,6 +13,8 @@ import edu.neu.csye7374.Decorator.HealthKitDecorator;
 import edu.neu.csye7374.Facade.DeliveryType;
 import edu.neu.csye7374.Facade.PharmacyFacade;
 import edu.neu.csye7374.Factory.MedicineFactory;
+import edu.neu.csye7374.Flyweight.MedicineFlyweight;
+import edu.neu.csye7374.Flyweight.SharedMedicine;
 import edu.neu.csye7374.Observer.Order;
 import edu.neu.csye7374.Prototype.HomeStoreDelivery;
 import edu.neu.csye7374.Prototype.StorePickUp;
@@ -189,5 +191,22 @@ public class Demo {
         System.out.println(medicine);
         System.out.println("***Demonstrating of Adapter pattern to adapt manufacturer legacy class with Medicine Interface and printing their object***");
         System.out.println(manufacturerAdapter);
+        
+        System.out.println("******************* Flyweight Design Pattern *******************");
+        
+        // Create and display multiple medicine instances
+        MedicineFlyweight med1 = new SharedMedicine("Dry", "Yes");
+        med1.displayInfo();
+
+        System.out.println("===========");
+
+        MedicineFlyweight med2 = new SharedMedicine("Cool", "No");
+        med2.displayInfo();
+
+        System.out.println("===========");
+
+        // Reuse the shared instance
+        MedicineFlyweight med3 = new SharedMedicine("Dry", "Yes");
+        med3.displayInfo();
 	}
 }
