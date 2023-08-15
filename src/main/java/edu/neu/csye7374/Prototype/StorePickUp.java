@@ -14,7 +14,7 @@ public class StorePickUp extends StoreDeliveryType {
         return new StorePickUp(this.getDeliveryId(), this.getDeliveryType(), this.getDeliveryCost(), this.getOrder());
     }
     @Override
-    String delivertDescription() {
+    String deliveryDescription() {
         // TODO Auto-generated method stub
         return "You need to pickup your oder from the Store";
     }
