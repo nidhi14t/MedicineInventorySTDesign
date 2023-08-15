@@ -16,7 +16,7 @@ public abstract class StoreDeliveryType implements Cloneable {
         this.order = order;
     }
 
-    abstract String delivertDescription();
+    abstract String deliveryDescription();
 
     public int getDeliveryId() {
         return deliveryId;

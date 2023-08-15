@@ -26,19 +26,6 @@ import java.util.List;
 public class Demo {
 	public static void main() {
 
-		// Calling the getInstance() method to get the singleton instance of
-		// MedicineInventory
-		//MedicineInventory inventorySystem = MedicineInventory.getInstance();
-
-		// Using inventorySystem instance to call other methods of the singleton,
-		// addMedicine, updateMedicine.
-		//inventorySystem.addMedicine(new Medicine(001, "Paracetamol", 100, LocalDate.of(2024, 8, 1)));
-
-		//inventorySystem.showMedicine();
-
-                
-                
-
         //Test for builder pattern - using factory and singleton
         System.out.println("******************* Builder design pattern******************* ");
         Pharmacy pharmacy = new Pharmacy("My Pharmacy");

@@ -15,7 +15,7 @@ public class HomeStoreDelivery extends StoreDeliveryType {
     }
 
     @Override
-    String delivertDescription() {
+    String deliveryDescription() {
         // TODO Auto-generated method stub
         return "Your order will be delivered to home";
     }
