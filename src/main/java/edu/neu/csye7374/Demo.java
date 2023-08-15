@@ -56,10 +56,12 @@ public class Demo {
         pharmacy.itemList.add(amoxicillin);
 
         // Add some employees
-        Pharmacist pharmacist1 = new PharmacistBuilder(1,  "Alice", "Smith",30, 5000.0);
-        Pharmacist pharmacist2 = new PharmacistBuilder(1,  "Jane", "Doe",25, 15000.0);
+        Pharmacist pharmacist1 = new PharmacistBuilder(1,  "Nidhi", "Tiwari",30, 5000.0);
+        Pharmacist pharmacist2 = new PharmacistBuilder(2,  "Sakshi", "Nayak",25, 15000.0);
+        Pharmacist pharmacist3 = new PharmacistBuilder(3,  "Prasanth", "Dwadasi",27, 25000.0);
         pharmacy.personList.add(pharmacist1);
         pharmacy.personList.add(pharmacist2);
+        pharmacy.personList.add(pharmacist3);
 
         // Print out pharmacy details
         System.out.println("Pharmacy Name: " + pharmacy.name);
@@ -86,11 +88,11 @@ public class Demo {
                 MedicineCategory.Prescription, "XYZ Pharma");
         pharmacyFacade.addMedicine(medicineBuilder1);
 
-        PharmacistBuilder pharmacistBuilder = new PharmacistBuilder(1, "John",
-                "Doe", 25, 50000);
+        PharmacistBuilder pharmacistBuilder = new PharmacistBuilder(1, "Nidhi",
+                "Tiwari", 25, 50000);
         pharmacyFacade.addPharmacist(pharmacistBuilder);
-        PharmacistBuilder pharmacistBuilder1 = new PharmacistBuilder(2, "Alisha",
-                "Mary", 27, 100000);
+        PharmacistBuilder pharmacistBuilder1 = new PharmacistBuilder(2, "Sakshi",
+                "Nayak", 27, 100000);
         pharmacyFacade.addPharmacist(pharmacistBuilder1);
         //Sorting the added medicines and employees
         pharmacyFacade.sortMedicines(pharmacyFacade.pharmacy);
